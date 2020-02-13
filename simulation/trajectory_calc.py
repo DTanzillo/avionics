@@ -1,3 +1,6 @@
+
+
+
 #model assumes thruster in a specific location and the rocket always points toward the resultant of the velocity
 #thrust and drag always act in opposite direction and follow the resultant of velocity
 
