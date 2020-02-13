@@ -9,6 +9,7 @@ from math import sin
 from math import sqrt
 import math
 import time
+import noise
 start_time = time.time()
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
@@ -23,11 +24,10 @@ SECOND_ORDER = 2
 
 X = 0
 Y = 1
-Z = 2
+Z = 2 #Verticle Direction
 
 #Constant Macros
-PI = 3.1415926535
-
+PI = 3.1415926535 ## why not just use mat.pi (we're already importing mat)
 
 #============== CLASSES ===============================
 
@@ -38,7 +38,7 @@ class model_params:
 		self.max_phi_accel = 0.1 # rad/s/time_step
 		self.max_theta_accel = 0.1 #rad/s/time_step
 		self.time_step = 0.01 #seconds
-		self.gravity = 9.8 #m/s^2 
+		self.gravity = 9.81 #m/s^2
 
 class rocket:
 
