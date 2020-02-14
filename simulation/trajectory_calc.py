@@ -9,7 +9,8 @@ from math import sin
 from math import sqrt
 import math
 import time
-import noise
+from helper_functions import brownian
+
 start_time = time.time()
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
@@ -167,6 +168,10 @@ class rocket:
 		self.accel = (-self.drag_const*self.velocity*self.velocity + self.thrust)/self.mass
 
 		#add random angle noise here
+		
+		x = [0,0]
+		x = brownian.brownian(x,5,.01,1)
+		
 		#propgate that through accel and vel to position
 
 		#update 3DOF angle based on phi and theta at time t
